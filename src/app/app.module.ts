@@ -17,6 +17,9 @@ import { AnalyticsComponent } from './shared/views/analytics/analytics.component
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import {MatCardModule} from '@angular/material/card';
 
+import { TestClassService } from './servises/test.abs.service';
+import { TestClass} from './servises/test.service';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,12 @@ import {MatCardModule} from '@angular/material/card';
     MatCardModule,
     
   ],
-  providers: [],
+  exports: [
+
+  ],
+  providers: [  
+   { provide:TestClassService, useClass: TestClass }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

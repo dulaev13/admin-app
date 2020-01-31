@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { TestClassService } from '../../../servises/test.abs.service';
+import { from } from 'rxjs';
 @Component({
   selector: 'app-analytics',
   templateUrl: './analytics.component.html',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnalyticsComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private testClass : TestClassService
+  ) { }
 
   ngOnInit() {
+
+  }
+  testF():void{
+    this.testClass.checkUser('ivan')
   }
 
 }
