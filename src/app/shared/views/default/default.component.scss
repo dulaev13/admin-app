@@ -1,0 +1,52 @@
+.flex-container {
+    /*генерирует flex-контейнер уровня блока*/
+    display: -webkit-flex; 
+    display: flex; 
+    flex-wrap: nowrap;
+    flex: auto;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-left: 2%;
+    align-content: stretch;
+    margin-bottom: 2%;
+
+    
+}
+
+.stats {
+    display:inline-block;
+    flex:1 1 auto; /*растягивает и сжимает флекс-элемент относительно его собственной ширины*/
+    // margin:0 20px 0 0;
+    margin-right: 2%;
+    padding: 2px;
+    padding-left: 5px;
+    align-content: flex-end;
+}
+
+.orders {
+
+    margin: 0 auto;
+    margin: 2% 2% 2%;
+ 
+}
+
+.order-card {
+    min-height: 300px;
+}
+
+p {
+    margin: 2%;
+}
+
+h3 {
+    font-weight: 500;
+}
+
+small {
+    font-size: 14px;
+}
+
+.main-container {
+    width: 100%;
+    min-width: 10vw;
+}
